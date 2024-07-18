@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <div class="navbar">
+            <img src="{{url_for('static',filename='images/logo.png')}}" alt="Picture" class="logo">
+            <nav>
+            <ul>
+              <a href="{{ url_for('basefunc') }}">Base File</a> 
+              <a href=""><li>About</li></a>
+              <a href="{{ url_for('offer_func') }}"><li>Offers</li></a>
+              <a href="{{ url_for('collections_func') }}" ><li>Collections</li></a>
+              <a href="{{ url_for('categories_func') }}"><li>Categories</li></a>
+            </ul>
+          </nav>
+          <img src="{{url_for('static',filename='images/cart.png')}}" alt="Picture" class="cart">
+        </div>      
+    </div> 
+    {% block content %}
+    {% endblock %}
+
+              
+</body>
+</html>

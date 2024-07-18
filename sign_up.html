@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/sign_in.css') }}">
+    <title>Document</title>
+</head>
+<body>
+    <div class="cont2">
+        <div class="text">
+          {% with errors=get_flashed_messages(category_filter=["error"]) %}
+          {% if errors %}
+          <div class="alert-danger" role="alert">
+            <ul>
+              {%- for msg in errors %}
+              <li>
+                {{ msg }}
+              </li>
+              {% endfor -%}
+            </ul>
+          </div>
+          {% endif %}
+          {% endwith %}
+          <form action="#" method="post">
+            <h1>Sign up</h1>
+            <input class="inp2" type="text" name="fn" placeholder="Enter First Name">
+            <input class="inp2" type="text" name="ln" placeholder="Enter Last Name">
+            <input class="inp2" type="text" name="un" placeholder="Enter Username">
+            <input class="inp2" type="text" name="em" placeholder="Enter Email">
+            <input class="inp2" type="password" name="ps1" placeholder="Enter Password">
+            <input class="inp2" type="password" name="ps2" placeholder="Enter Password">
+            <button type="submit">Sign up</button>
+          </form>
+        </div>
+    </div>
+</body>
+</html>

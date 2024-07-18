@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <div class="navbar">
+            <img src="{{url_for('static',filename='images/logo.png')}}" alt="Picture" class="logo">
+            <nav>
+            <ul>
+              <a href="{{ url_for('basefunc') }}">Base File</a> 
+              <a href=""><li>About</li></a>
+              <a href="{{ url_for('offer_func') }}"><li>Offers</li></a>
+              <a href="{{ url_for('collections_func') }}" ><li>Collections</li></a>
+              <a href="{{ url_for('categories_func') }}"><li>Categories</li></a>
+            </ul>
+          </nav>
+          <img src="{{url_for('static',filename='images/cart.png')}}" alt="Picture" class="cart">
+        </div>      
+        <div class="products">
+            <div class="productcard">
+                <img src="{{url_for('static',filename='images/coat1.jpg')}}">
+            </div>
+            
+            <div class="productdetailscard">
+                <h1>Wool Coat</h1>
+                <p>4.5 stars (100+ reviews)</p>
+                <h2>Description</h2>
+                <p>Materials:polyester, cotton</p>
+                <p>Button up with tie</p>
+                <p>Length: Long</p>
+                <p>Care Instructions: Hand wash with cold water</p>
+                <form action="/mycart" method="post">
+                    <button type="submit">Place item in Cart</button>
+                </form>
+                
+            </div>
+                
+        </div>
+    </div>
+     
+</body>
+</html>

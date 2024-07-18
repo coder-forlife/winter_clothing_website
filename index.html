@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+{% block content%}
+<div class="content">
+<a href="collectionspage.html">2023 winter clothing</a>
+<h1>Be fashionable<br>In this Cold Weather!</h1>
+<p>Clothes that will keep you warm this winter.</p>
+</div>
+<img src="{{url_for('static',filename='images/img.png')}}" alt="the image" class="feature-img">
+<img src="{{ url_for('static',filename='images/Profile-PNG_File.png')}}" alt="profile_pic" class="">
+{% endblock %}

@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="{{url_for('static',filename='css/cart.css')}}" rel="stylesheet" type="text/css" />
+</head>
+<body>
+    <div class="navbar">
+        
+        <img src="{{url_for('static',filename='images/logo.png')}}" class="logo">
+        <nav>
+            <ul>
+            <a href="/home"><li>Home</li></a>
+            <li>About</li>
+            <a href="/collections"><li>Collections</li></a>
+            <li>Categories</li>
+            <li>Contact Us</li>
+            </ul>
+        </nav>
+        <img src="{{url_for('static',filename='images/cart.png')}}" class="cart">
+    </div>
+
+
+                    <!--count=4-->
+        {% if(('#1111' in Data["Prodd"])and(Data["count1"]==4)) %}
+                    
+        <h1>Black Coat</h1>
+        <p>4.5 stars (100+ reviews)</p>
+        <img src="{{url_for('static',filename='images/coat1.jpg')}}">
+        <form action="/mycart" method="post">
+            <button class=button type="submit" id="delete_btn1">Remove from cart</button>
+        </form>
+        {% endif %}
+            
+                
+        {% if(('#2222' in Data["Prodd"])and(Data["count2"]==4)) %}
+                    
+            <h1>Grey Coat</h1>
+            <p>4.5 stars (100+ reviews)</p>
+            <img src="{{url_for('static',filename='images/coat2.jpg')}}">
+            <form action="/mycart" method="post">
+                <button class=button type="submit" id="delete_btn2">Remove from cart</button>
+            </form>
+        {% endif %}
+
+        {% if(('#3333' in Data["Prodd"])and(Data["count3"]==4)) %}
+                    
+            <h1>Red Coat</h1>
+            <p>4.5 stars (100+ reviews)</p>
+            <img src="{{url_for('static',filename='images/jacket1.jpg')}}">
+            <form action="/mycart" method="post">
+                <button class=button type="submit" id="delete_btn3">Remove from cart</button>
+            </form>
+        {% endif %}
+
+        {% if(('#4444' in Data["Prodd"])and(Data["count4"]==4)) %}
+                    
+            <h1>Hooded Coat</h1>
+            <p>4.5 stars (100+ reviews)</p>
+            <img src="{{url_for('static',filename='images/coat4.jpg')}}">
+            <form action="/mycart" method="post">
+                <button class=button type="submit" id="delete_btn4">Remove from cart</button>
+            </form>
+        {% endif %}   
+        
+    
+
+                    <!--count=3-->
+        {% if(('#1111' in Data["Prodc"])and(Data["count1"]==3)) %}
+                    
+            <h1>Black Coat</h1>
+            <p>4.5 stars (100+ reviews)</p>
+            <img src="{{url_for('static',filename='images/coat1.jpg')}}">
+            <form action="/mycart" method="post">
+                <button class=button type="submit" id="delete_btn1">Remove from cart</button>
+            </form>
+        {% endif %}
+            
+                
+        {% if(('#2222' in Data["Prodc"])and(Data["count2"]==3)) %}
+                    
+            <h1>Grey Coat</h1>
+            <p>4.5 stars (100+ reviews)</p>
+            <img src="{{url_for('static',filename='images/coat2.jpg')}}">
+            <form action="/mycart" method="post">
+                <button class=button type="submit" id="delete_btn2">Remove from cart</button>
+            </form>
+        {% endif %}
+
+        {% if(('#3333' in Data["Prodc"])and(Data["count3"]==3)) %}
+                    
+            <h1>Red Coat</h1>
+            <p>4.5 stars (100+ reviews)</p>
+            <img src="{{url_for('static',filename='images/jacket1.jpg')}}">
+            <form action="/mycart" method="post">
+                <button class=button type="submit" id="delete_btn3">Remove from cart</button>
+            </form>
+        {% endif %}
+
+        {% if(('#4444' in Data["Prodc"])and(Data["count4"]==3)) %}
+                    
+            <h1>Hooded Coat</h1>
+            <p>4.5 stars (100+ reviews)</p>
+            <img src="{{url_for('static',filename='images/coat4.jpg')}}">
+            <form action="/mycart" method="post">
+                <button class=button type="submit" id="delete_btn4">Remove from cart</button>
+            </form>
+        {% endif %}                 
+                
+            
+                                <!-- count=2 -->
+
+        {% if(('#1111' in Data["Prodb"])and(Data["count1"]==2)) %}
+                    
+            <h1>Black  Coat</h1>
+            <p>4.5 stars (100+ reviews)</p>
+            <img src="{{url_for('static',filename='images/coat1.jpg')}}">
+            <form action="/mycart" method="post">
+                <button class=button type="submit" id="delete_btn1">Remove from cart</button>
+            </form>
+        {% endif %}
+            
+                
+        {% if(('#2222' in Data["Prodb"])and(Data["count2"]==2)) %}
+                    
+            <h1>Grey Coat</h1>
+            <p>4.5 stars (100+ reviews)</p>
+            <img src="{{url_for('static',filename='images/coat2.jpg')}}">
+            <form action="/mycart" method="post">
+                <button class=button type="submit" id="delete_btn2">Remove from cart</button>
+            </form>
+        {% endif %}
+
+        {% if(('#3333' in Data["Prodb"])and(Data["count3"]==2)) %}
+                    
+            <h1>Red Coat</h1>
+            <p>4.5 stars (100+ reviews)</p>
+            <img src="{{url_for('static',filename='images/jacket1.jpg')}}">
+            <form action="/mycart" method="post">
+                <button class=button type="submit" id="delete_btn3">Remove from cart</button>
+            </form>
+        {% endif %}
+
+        {% if(('#4444' in Data["Prodb"])and(Data["count4"]==2)) %}
+                    
+            <h1>Hooded Coat</h1>
+            <p>4.5 stars (100+ reviews)</p>
+            <img src="{{url_for('static',filename='images/coat4.jpg')}}">
+            <form action="/mycart" method="post">
+                <button class=button type="submit" id="delete_btn4">Remove from cart</button>
+            </form>
+        {% endif %}
+            
+
+            <!-- count=1 -->
+        {% if(('#1111' in Data["Proda"])and(Data["count1"]==1)) %}
+                    
+            <h1>Black Coat</h1>
+            <p>4.5 stars (100+ reviews)</p>
+            <img src="{{url_for('static',filename='images/coat1.jpg')}}">
+            <form action="/mycart" method="post">
+                <button class=button type="submit" id="delete_btn1">Remove from cart</button>
+            </form>
+
+        {% endif %}
+
+
+        {% if(('#2222' in Data["Proda"])and(Data["count2"]==1)) %}
+            
+            <h1>Grey Coat</h1>
+            <p>4.5 stars (100+ reviews)</p>
+            <img src="{{url_for('static',filename='images/coat2.jpg')}}">
+            <form action="/mycart" method="post">
+                <button class=button type="submit" id="delete_btn2">Remove from cart</button>
+            </form>   
+        {% endif %}
+
+        {% if(('#3333' in Data["Proda"])and(Data["count3"]==1)) %}
+            
+            <h1>Red Coat</h1>
+            <p>4.5 stars (100+ reviews)</p>
+            <img src="{{url_for('static',filename='images/jacket1.jpg')}}">
+            <form action="/mycart" method="post">
+                <button class=button type="submit" id="delete_btn3">Remove from cart</button>
+            </form>
+        {% endif %}
+
+        {% if(('#4444' in Data["Proda"])and(Data["count4"]==1)) %}
+            
+            <h1>Hooded Coat</h1>
+            <p>4.5 stars (100+ reviews)</p>
+            <img src="{{url_for('static',filename='images/coat4.jpg')}}">
+            <form action="/mycart" method="post">
+                <button class=button type="submit" id="delete_btn4">Remove from cart</button>
+            </form>
+        {% endif %}
+    
+</body>
+</html>

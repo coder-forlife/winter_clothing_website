@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/profile.css') }}">
+    <title>Document</title>
+</head>
+<body>
+  <div class="MyProf">
+    <div class="navbar">
+      <nav>
+        <ul>
+          <li>
+            <a href="/">Home</a>
+          </li>
+          <li>
+            <a href="{{ url_for('my_cart_func_post') }}">Cart</href>
+          </li>
+          <li>
+            <a href="{{ url_for('orders_func') }}">Orders</href>
+          </li>
+          <li>
+            <a href="{{ url_for('collections_func') }}">Collections</href>
+          </li>
+          <li>
+            <a href="{{ url_for('categories_func') }}">Categories</href>
+          </li>
+          <li>
+            <a href="">Contact Us</href>
+          </li>
+          <li>
+            <a href="/myprofile">Profile</href>
+          </li>
+        </ul>
+      </nav>
+    </div>
+    <div class="card">
+      <h1>{{ dataToRender["name"] }}</h1>
+      <p>{{ dataToRender["username"] }}</p>
+      <img src="{{url_for('static',filename='images/Profile-PNG-File.png')}}" id="profile-pic">
+      <label for="input-file">Update Image</label>
+      <input type="file" accept="image/jpeg, image/png, image/jpg" id="input-file">
+      <div class=buttons>
+        <a href="{{ url_for('my_cart_func_get') }}"><button name="forwardbtn">Cart</button></a>
+        <a href="{{ url_for('orders_func') }}"><button name="forwardbtn">Orders</button></a>
+        <a href="{{ url_for('edit_func_post') }}"><button name="forwardbtn">Edit Profile</button></a>
+    </div>
+  </div>
+  <script>
+    let profilePic=document.getElementById("profile-pic");
+    let inputFile=document.getElementById("input-file");
+    inputFile.onchange=function(){
+      profilePic.src=URL.createObjectURL(inputFile.files[0]);
+    }
+  </script>
+
+</body>
+</html>

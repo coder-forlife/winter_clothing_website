@@ -1,0 +1,124 @@
+.container{
+    height:100%;
+    width:100%;
+    background-image:url('background.png');
+    background-position:center;
+    background-size:cover;
+    box-sizing:border-box;
+    position:relative;
+    margin-top:5%;
+    border-radius:20px;
+
+  }
+
+  .navbar{
+    width:100%;
+    height:15vh;
+    margin:auto;
+    display:flex;
+    align-items:center;
+  }
+  .logo{
+    width:160px;
+    cursor:pointer;
+  }
+  .cart{
+    width:40px;
+    cursor:pointer;
+    margin-left:100px;
+  }
+  nav{
+    flex:1;
+    padding-left:60px;
+  }
+  nav ul li{
+    display:inline-block;
+    list-style:none;
+    margin:0px 30px;
+    color:#333;
+  }
+  .content h1{
+    font-size:60px;
+    font-weight:100;
+    margin-top:2px;
+    margin-bottom:1px;
+    margin-left:10px;
+    color:#232d60;
+  }
+  .content p{
+    font-size:20px;
+    color:#607199;
+  }
+  .content{
+	  
+	  position: absolute;
+	  bottom: 0px;
+	  margin-left:20%;
+
+  }
+  .feature-img{
+    height:105%;
+    position:absolute;
+    right:-20px;
+	bottom:0;
+  }
+  .products1{
+    display:inline-block;
+    width: 100px;
+    height: 100px;
+    align-items:center;
+    margin: 0px 100px;
+  }
+  
+  .content img:hover{
+    transform:scale(1.05);
+    transition:0.5s;
+    
+  }
+  
+  .products{
+    align-items:center;
+    display:inline-block;
+  }
+  .productcard {
+    width:400px;
+    background:#fff;
+    padding:40px;
+    border-radius:15px;
+    display:inline-block;
+    margin:0 20px;
+  }
+ .productcard h1{
+  font-weight:500;
+ }
+
+ .productcard img{
+  margin-top:40px;
+  margin-bottom:30px;
+ }
+
+
+img{
+  margin-left:5%
+}
+
+h1{
+  text-align:center;
+}
+
+.productdetailscard{
+  width:400px;
+  background:#fff;
+  padding:40px;
+  border-radius:15px;
+  bottom:0;
+  display:inline-block;
+  align-items:right;
+  margin:20px;
+  margin-top:7%;
+}
+
+.productdetailscard{
+  font-weight:500;
+}
+

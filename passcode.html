@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/sign_in.css') }}">
+    <title>Document</title>
+</head>
+<body>
+    <div class="text">
+        {% with errors=get_flashed_messages(category_filter=["error"]) %}
+          {% if errors %}
+          <div class="alert-danger" role="alert">
+            <ul>
+              {%- for msg in errors %}
+              <li>
+                {{ msg }}
+              </li>
+              {% endfor -%}
+            </ul>
+          </div>
+          {% endif %}
+        {% endwith %}
+        <div class="cont2">
+            <form action="#" method="post">
+                <h1>Passcode</h1>
+                <input class="inp1" type="password" name="pc" placeholder="Enter the 5-digit passcode">
+                <button type="submit">Enter</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
